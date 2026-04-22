@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Integrador - Taller ED</title>
+  <link rel="stylesheet" href="../static/css/estilos.css" />
+  <link rel="stylesheet" href="../static/css/taller.css" />
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="btn-volver">← Volver al menú</a>
+    <h1>⚙️ Ejercicio Integrador</h1>
+    <p class="subtitulo">Combina: Lista · Pila · Cola · Diccionario</p>
+
+    <!-- Agregar producto -->
+    <div class="seccion">
+      <h2>📦 Agregar producto <span class="badge">Lista + Diccionario</span></h2>
+      <div class="input-group">
+        <label>Nombre del producto:</label>
+        <input type="text" id="inputProducto" placeholder="Ej: Laptop" />
+      </div>
+      <div class="input-group">
+        <label>Precio:</label>
+        <input type="number" id="inputPrecio" min="0" step="0.01" placeholder="Ej: 2500000" />
+      </div>
+      <button onclick="agregarProducto()">Agregar producto</button>
+    </div>
+
+    <!-- Eliminar producto -->
+    <div class="seccion">
+      <h2>🗑️ Eliminar producto <span class="badge">Lista + Diccionario</span></h2>
+      <div class="input-group">
+        <label>Nombre del producto:</label>
+        <input type="text" id="inputEliminarProducto" placeholder="Ej: Laptop" />
+      </div>
+      <button onclick="eliminarProducto()" class="btn-danger">Eliminar producto</button>
+    </div>
+
+    <!-- Registrar pedido -->
+    <div class="seccion">
+      <h2>🛒 Registrar pedido <span class="badge">Cola</span></h2>
+      <div class="input-group">
+        <label>Nombre del cliente:</label>
+        <input type="text" id="inputCliente" placeholder="Ej: Ana García" />
+      </div>
+      <div class="input-group">
+        <label>Producto (debe existir en la lista):</label>
+        <input type="text" id="inputProductoPedido" placeholder="Ej: Laptop" />
+      </div>
+      <button onclick="registrarPedido()">Registrar pedido</button>
+    </div>
+
+    <!-- Deshacer -->
+    <div class="seccion">
+      <h2>↩️ Deshacer última acción <span class="badge">Pila</span></h2>
+      <button onclick="deshacerUltimaAccion()" class="btn-danger">Deshacer (UNDO)</button>
+    </div>
+
+    <p id="mensajeInt" class="mensaje-exito"></p>
+
+    <!-- Vista del sistema -->
+    <div class="seccion">
+      <h2>📊 Estado del sistema</h2>
+      <button onclick="mostrarSistema()" class="btn-info">🔄 Actualizar vista</button>
+
+      <div class="grid-sistema">
+        <div class="panel-sistema">
+          <h3>📋 Lista de Productos</h3>
+          <div id="vistaProductos"><p class="pila-vacia">Sin productos</p></div>
+        </div>
+        <div class="panel-sistema">
+          <h3>📚 Pila de Acciones</h3>
+          <div id="vistaPila"><p class="pila-vacia">Sin acciones</p></div>
+        </div>
+        <div class="panel-sistema">
+          <h3>🏦 Cola de Pedidos</h3>
+          <div id="vistaCola"><p class="pila-vacia">Sin pedidos</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../static/js/script_Integrador.js"></script>
+</body>
+</html>

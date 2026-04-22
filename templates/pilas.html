@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pilas - Taller ED</title>
+  <link rel="stylesheet" href="../static/css/estilos.css" />
+  <link rel="stylesheet" href="../static/css/taller.css" />
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="btn-volver">← Volver al menú</a>
+    <h1>📚 Ejercicio 2 - Pilas (Sistema UNDO)</h1>
+
+    <!-- Agregar una acción -->
+    <div class="seccion">
+      <h2>Agregar una acción</h2>
+      <div class="input-group">
+        <label>Acción (ej: escribir, borrar, copiar):</label>
+        <input type="text" id="inputAccion" placeholder="Ej: escribir" />
+      </div>
+      <button onclick="agregarAccion()">Agregar acción</button>
+    </div>
+
+    <!-- Agregar múltiples acciones -->
+    <div class="seccion">
+      <h2>Agregar múltiples acciones</h2>
+      <div class="input-group">
+        <label>Acciones separadas por coma (escribe "fin" al final para terminar):</label>
+        <input type="text" id="inputMultiples" placeholder="Ej: escribir, copiar, pegar, fin" />
+      </div>
+      <button onclick="ingresarMultiples()">Agregar todas</button>
+    </div>
+
+    <!-- Operaciones UNDO -->
+    <div class="seccion">
+      <h2>Operaciones</h2>
+      <div class="botones-grupo">
+        <button onclick="deshacerAccion()" class="btn-danger">↩️ Deshacer (Pop)</button>
+        <button onclick="verUltimaAccion()" class="btn-info">👁️ Ver última (Peek)</button>
+      </div>
+    </div>
+
+    <p id="mensajePila" class="mensaje-exito"></p>
+
+    <!-- Estado de la pila -->
+    <div class="seccion">
+      <h2>Estado de la pila</h2>
+      <div id="estadoPila"><p class="pila-vacia">📭 La pila está vacía</p></div>
+    </div>
+  </div>
+
+  <script src="../static/js/script_Pilas.js"></script>
+</body>
+</html>

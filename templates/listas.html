@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Listas - Taller ED</title>
+  <link rel="stylesheet" href="../static/css/estilos.css" />
+  <link rel="stylesheet" href="../static/css/taller.css" />
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="btn-volver">← Volver al menú</a>
+    <h1>📋 Ejercicio 1 - Listas Enlazadas</h1>
+
+    <!-- Ingresar números -->
+    <div class="seccion">
+      <h2>Ingresar números a la lista</h2>
+      <div class="input-group">
+        <label>¿Cuántos números deseas ingresar?</label>
+        <input type="number" id="cantidadNumeros" min="1" placeholder="Ej: 5" />
+      </div>
+      <div class="input-group">
+        <label>Ingresa los números separados por coma:</label>
+        <input type="text" id="numerosIngresados" placeholder="Ej: 4, 7, 2, 9, 1" />
+      </div>
+      <button onclick="ingresarNumeros()">Agregar a la lista</button>
+    </div>
+
+    <!-- Resultado -->
+    <div class="seccion">
+      <h2>Estado de la lista</h2>
+      <div id="resultado"><p class="pila-vacia">La lista está vacía</p></div>
+    </div>
+
+    <!-- Eliminar número -->
+    <div class="seccion">
+      <h2>Eliminar un número</h2>
+      <div class="input-group">
+        <label>Número a eliminar:</label>
+        <input type="number" id="numEliminar" placeholder="Ej: 7" />
+      </div>
+      <button onclick="eliminarNumero()" class="btn-danger">Eliminar</button>
+    </div>
+
+    <!-- Insertar en posición -->
+    <div class="seccion">
+      <h2>Insertar en posición específica</h2>
+      <div class="input-group">
+        <label>Posición (0 = inicio):</label>
+        <input type="number" id="posInsertar" min="0" placeholder="Ej: 2" />
+      </div>
+      <div class="input-group">
+        <label>Número a insertar:</label>
+        <input type="number" id="valInsertar" placeholder="Ej: 15" />
+      </div>
+      <button onclick="insertarEnPosicion()">Insertar</button>
+    </div>
+
+    <p id="mensaje" class="mensaje-exito"></p>
+  </div>
+
+  <script src="../static/js/script_Listas.js"></script>
+</body>
+</html>

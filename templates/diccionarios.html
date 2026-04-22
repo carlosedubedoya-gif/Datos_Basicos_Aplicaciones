@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diccionarios - Taller ED</title>
+  <link rel="stylesheet" href="../static/css/estilos.css" />
+  <link rel="stylesheet" href="../static/css/taller.css" />
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="btn-volver">← Volver al menú</a>
+    <h1>🎓 Ejercicio 4 - Diccionarios (Estudiantes)</h1>
+
+    <!-- Registrar estudiante -->
+    <div class="seccion">
+      <h2>Registrar estudiante</h2>
+      <div class="input-group">
+        <label>Código del estudiante:</label>
+        <input type="text" id="inputCodigo" placeholder="Ej: 2024001" />
+      </div>
+      <div class="input-group">
+        <label>Nombre:</label>
+        <input type="text" id="inputNombre" placeholder="Ej: Juan Pérez" />
+      </div>
+      <div class="input-group">
+        <label>Nota final (0 - 5):</label>
+        <input type="number" id="inputNota" min="0" max="5" step="0.1" placeholder="Ej: 4.2" />
+      </div>
+      <button onclick="agregarEstudiante()">Registrar</button>
+    </div>
+
+    <!-- Buscar estudiante -->
+    <div class="seccion">
+      <h2>Buscar estudiante por código</h2>
+      <div class="input-group">
+        <label>Código:</label>
+        <input type="text" id="inputBuscar" placeholder="Ej: 2024001" />
+      </div>
+      <button onclick="buscarEstudiante()" class="btn-info">🔍 Buscar</button>
+      <div id="resultadoBusqueda" style="margin-top:15px;"></div>
+    </div>
+
+    <!-- Actualizar nota -->
+    <div class="seccion">
+      <h2>Actualizar nota</h2>
+      <div class="input-group">
+        <label>Código del estudiante:</label>
+        <input type="text" id="inputActCodigo" placeholder="Ej: 2024001" />
+      </div>
+      <div class="input-group">
+        <label>Nueva nota (0 - 5):</label>
+        <input type="number" id="inputActNota" min="0" max="5" step="0.1" placeholder="Ej: 4.8" />
+      </div>
+      <button onclick="actualizarNota()">Actualizar nota</button>
+    </div>
+
+    <!-- Eliminar estudiante -->
+    <div class="seccion">
+      <h2>Eliminar estudiante</h2>
+      <div class="input-group">
+        <label>Código del estudiante:</label>
+        <input type="text" id="inputEliminarCodigo" placeholder="Ej: 2024001" />
+      </div>
+      <button onclick="eliminarEstudiante()" class="btn-danger">Eliminar</button>
+    </div>
+
+    <p id="mensajeDic" class="mensaje-exito"></p>
+
+    <!-- Lista completa -->
+    <div class="seccion">
+      <h2>Lista completa de estudiantes</h2>
+      <button onclick="mostrarTodos()" class="btn-info">🔄 Actualizar lista</button>
+      <div id="tablaEstudiantes" style="margin-top:15px;">
+        <p class="pila-vacia">📭 No hay estudiantes registrados</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../static/js/script_Diccionarios.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colas - Taller ED</title>
+  <link rel="stylesheet" href="../static/css/estilos.css" />
+  <link rel="stylesheet" href="../static/css/taller.css" />
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="btn-volver">← Volver al menú</a>
+    <h1>🏦 Ejercicio 3 - Colas (Banco)</h1>
+
+    <!-- Ingresar múltiples clientes -->
+    <div class="seccion">
+      <h2>Ingresar clientes a la cola</h2>
+      <div class="input-group">
+        <label>Nombres separados por coma (escribe "fin" al final):</label>
+        <input type="text" id="inputClientes" placeholder="Ej: Ana, Luis, María, fin" />
+      </div>
+      <button onclick="ingresarClientes()">Agregar clientes</button>
+    </div>
+
+    <!-- Agregar un cliente normal -->
+    <div class="seccion">
+      <h2>Agregar un cliente al final</h2>
+      <div class="input-group">
+        <label>Nombre del cliente:</label>
+        <input type="text" id="inputUnCliente" placeholder="Ej: Carlos" />
+      </div>
+      <button onclick="agregarCliente()">Agregar al final</button>
+    </div>
+
+    <!-- Agregar cliente prioritario -->
+    <div class="seccion">
+      <h2>⭐ Agregar cliente prioritario (al inicio)</h2>
+      <div class="input-group">
+        <label>Nombre del cliente prioritario:</label>
+        <input type="text" id="inputPrioritario" placeholder="Ej: Don Pedro" />
+      </div>
+      <button onclick="agregarPrioritario()" class="btn-info">Agregar prioritario</button>
+    </div>
+
+    <!-- Atender cliente -->
+    <div class="seccion">
+      <h2>Atender cliente</h2>
+      <button onclick="atenderCliente()" class="btn-danger">✅ Atender siguiente cliente</button>
+    </div>
+
+    <p id="mensajeCola" class="mensaje-exito"></p>
+
+    <!-- Estado de la cola -->
+    <div class="seccion">
+      <h2>Estado actual de la cola</h2>
+      <div id="estadoCola"><p class="pila-vacia">📭 No hay clientes en la cola</p></div>
+    </div>
+  </div>
+
+  <script src="../static/js/script_Colas.js"></script>
+</body>
+</html>
